@@ -13,10 +13,10 @@ Modern, güvenli ve analitik destekli URL kısaltma servisi. Flask ile geliştir
 
 ## 🎯 Demo Sonuçları
 
-### 💻 Ana Arayüz
+### 💻 URL Kısaltma Arayüzü
 
 <div align="center">
-  <img src="screenshots/main-interface.png" alt="Ana Arayüz" width="800">
+  <img src="images/url-kısaltma.png" alt="URL Kısaltma Arayüzü" width="800">
 </div>
 
 **Özellikler:**
@@ -25,17 +25,29 @@ Modern, güvenli ve analitik destekli URL kısaltma servisi. Flask ile geliştir
 - Özel kod desteği
 - Responsive layout
 
-### 📊 Analytics Dashboard
+### 📊 İstatistik Dashboard
 
 <div align="center">
-  <img src="screenshots/analytics-dashboard.png" alt="Analytics Dashboard" width="800">
+  <img src="images/istatistik.png" alt="İstatistik Dashboard" width="800">
 </div>
 
-**Metrikler:**
+**Analitikler:**
 - Gerçek zamanlı tıklama takibi
-- Detaylı istatistikler
-- Görsel analitikler
-- Export özellikleri
+- Detaylı URL metrikleri
+- QR kod üretimi
+- Click-through oranları
+
+### 📋 Son Eklenen URL'ler
+
+<div align="center">
+  <img src="images/son eklenen.png" alt="Son Eklenen URL'ler" width="800">
+</div>
+
+**Dashboard Özellikleri:**
+- Toplam URL sayısı
+- En çok tıklanan linkler
+- Son oluşturulan URL'ler
+- Görsel istatistikler
 
 ---
 
@@ -296,6 +308,7 @@ Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için [LICENSE](LICE
 
 ---
 
+
 ## 📞 İletişim
 
 - **Email**: elifnuroksuz4@gmail.com
@@ -303,6 +316,7 @@ Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için [LICENSE](LICE
 - **LinkedIn**: [[Your LinkedIn](https://linkedin.com/in/username)](https://www.linkedin.com/in/elifnuroksuz/)
 
 ---
+
 
 ## 🙏 Teşekkürler
 
@@ -315,3 +329,6 @@ Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için [LICENSE](LICE
 <div align="center">
   <sub>⭐ Bu projeyi beğendiyseniz yıldız vermeyi unutmayın!</sub>
 </div>
+
+
+
