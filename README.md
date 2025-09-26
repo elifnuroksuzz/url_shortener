@@ -313,7 +313,7 @@ Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için [LICENSE](LICE
 
 - **Email**: elifnuroksuz4@gmail.com
 - **GitHub**: https://github.com/elifnuroksuzz
-- **LinkedIn**: [[Your LinkedIn](https://linkedin.com/in/username)](https://www.linkedin.com/in/elifnuroksuz/)
+- **LinkedIn**: (https://linkedin.com/in/username)](https://www.linkedin.com/in/elifnuroksuz/)
 
 ---
 
