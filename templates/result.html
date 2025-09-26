@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Kısaltıldı! - URL Shortener</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .success-icon {
+            font-size: 48px;
+            color: #28a745;
+            margin-bottom: 20px;
+        }
+        .short-url {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            border: 2px solid #007bff;
+            margin: 20px 0;
+            font-size: 18px;
+            font-weight: bold;
+            word-break: break-all;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .btn-primary {
+            background: #007bff;
+            color: white;
+        }
+        .btn-success {
+            background: #28a745;
+            color: white;
+        }
+        .btn-secondary {
+            background: #6c757d;
+            color: white;
+        }
+        .stats {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 5px;
+            text-align: left;
+        }
+        .copy-msg {
+            color: #28a745;
+            font-size: 14px;
+            margin-top: 10px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="success-icon">✅</div>
+        <h1>URL Başarıyla Kısaltıldı!</h1>
+        
+        <p>Kısa URL'niz hazır:</p>
+        
+        <div class="short-url" id="shortUrl">
+            {{ short_url }}
+        </div>
+        
+        <div class="copy-msg" id="copyMsg">✅ Panoya kopyalandı!</div>
+        
+        <div>
+            <button class="btn btn-success" onclick="copyToClipboard()">📋 Kopyala</button>
+            <a href="{{ short_url }}" class="btn btn-primary" target="_blank">🔗 Test Et</a>
+            <a href="{{ url_for('stats', code=url_obj.short_code) }}" class="btn btn-secondary">📊 İstatistikler</a>
+        </div>
+        
+        <div class="stats">
+            <h3>📋 URL Detayları</h3>
+            <p><strong>Orijinal URL:</strong><br>
+            <a href="{{ url_obj.original_url }}" target="_blank">{{ url_obj.original_url }}</a></p>
+            
+            <p><strong>Kısa Kod:</strong> {{ url_obj.short_code }}</p>
+            
+            {% if url_obj.description %}
+            <p><strong>Açıklama:</strong> {{ url_obj.description }}</p>
+            {% endif %}
+            
+            <p><strong>Oluşturulma:</strong> {{ url_obj.created_at.strftime('%d.%m.%Y %H:%M') }}</p>
+            <p><strong>Tıklama Sayısı:</strong> {{ url_obj.click_count }}</p>
+        </div>
+        
+        <div style="margin-top: 30px;">
+            <a href="{{ url_for('index') }}" class="btn btn-primary">🔄 Yeni URL Kısalt</a>
+        </div>
+    </div>
+
+    <script>
+        function copyToClipboard() {
+            const shortUrl = document.getElementById('shortUrl').textContent;
+            navigator.clipboard.writeText(shortUrl).then(function() {
+                const msg = document.getElementById('copyMsg');
+                msg.style.display = 'block';
+                setTimeout(() => {
+                    msg.style.display = 'none';
+                }, 3000);
+            }).catch(function(err) {
+                alert('Kopyalama başarısız: ' + err);
+            });
+        }
+    </script>
+</body>
+</html>

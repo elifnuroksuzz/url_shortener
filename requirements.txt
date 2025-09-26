@@ -1,0 +1,30 @@
+# Flask URL Shortener - Gerekli Kütüphaneler
+# Python 3.8+ gereklidir
+
+# Ana Flask framework
+Flask==2.3.3
+
+# Flask extensions
+Flask-SQLAlchemy==3.0.5      # ORM için veritabanı işlemleri
+Flask-WTF==1.1.1             # Form güvenliği ve doğrulama
+WTForms==3.0.1               # Form işleme
+
+# Güvenlik ve şifreleme
+Werkzeug==2.3.7              # Güvenli hash fonksiyonları
+itsdangerous==2.1.2          # Token güvenliği
+
+# URL doğrulama
+validators==0.20.0           # URL format doğrulaması
+
+# Veritabanı
+# SQLite Python ile birlikte gelir, ek kurulum gerekmez
+
+# Geliştirme için isteğe bağlı
+python-dotenv==1.0.0         # Environment variables (.env dosyası)
+
+# Test için (isteğe bağlı)
+pytest==7.4.2
+pytest-flask==1.2.0
+
+# Production için (isteğe bağlı)
+gunicorn==21.2.0             # WSGI server
